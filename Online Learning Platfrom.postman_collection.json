@@ -1,0 +1,893 @@
+{
+	"info": {
+		"_postman_id": "5bc19947-9d3e-4326-92e8-27b5a28f2ffe",
+		"name": "Online Learning Platfrom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33644983"
+	},
+	"item": [
+		{
+			"name": "New request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john@google.com\",\n    \"password\": \"securePassword123\",\n    \"mobile\": \"+919876543210\",\n    \"targetExam\": \"UPSC\",\n    \"preferredLanguage\": \"English\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Dr. Sarah Kumar\",\n    \"email\": \"sarah@google.com\",\n    \"password\": \"securePassword123\",\n    \"mobile\": \"+919876543211\",\n    \"subjects\": [\"Mathematics\", \"Physics\"],\n    \"qualification\": \"PhD in Physics, IIT Delhi\",\n    \"experience\": 8,\n    \"bio\": \"8+ years of teaching experience...\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/auth/educator/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"educator",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"john@google.com\",\n    \"password\": \"securePassword123\",\n    \"role\": \"learner\" \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/courses/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"courses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImxlYXJuZXIiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3NTU3NTM1MDUsImV4cCI6MTc1NTgzOTkwNX0.jzk6MKeo_kNuSVuabkWyWYPcpz6IpaUfe452LPr9hco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/courses/1/enroll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"courses",
+						"1",
+						"enroll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImxlYXJuZXIiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3NTU3NTM1MDUsImV4cCI6MTc1NTgzOTkwNX0.jzk6MKeo_kNuSVuabkWyWYPcpz6IpaUfe452LPr9hco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/lessons/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"lessons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImxlYXJuZXIiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3NTU3NTM1MDUsImV4cCI6MTc1NTgzOTkwNX0.jzk6MKeo_kNuSVuabkWyWYPcpz6IpaUfe452LPr9hco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/lessons/1/progress",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"lessons",
+						"1",
+						"progress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImxlYXJuZXIiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3NTU3NTM1MDUsImV4cCI6MTc1NTgzOTkwNX0.jzk6MKeo_kNuSVuabkWyWYPcpz6IpaUfe452LPr9hco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/lessons/1/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"lessons",
+						"1",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/live-classes/schedule",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"live-classes",
+						"schedule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImxlYXJuZXIiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3NTU3NTM1MDUsImV4cCI6MTc1NTgzOTkwNX0.jzk6MKeo_kNuSVuabkWyWYPcpz6IpaUfe452LPr9hco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/live-classes/1/join",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"live-classes",
+						"1",
+						"join"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImxlYXJuZXIiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3NTU3NTM1MDUsImV4cCI6MTc1NTgzOTkwNX0.jzk6MKeo_kNuSVuabkWyWYPcpz6IpaUfe452LPr9hco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"question\": \"Can you explain this formula again?\",\n    \"timestamp\": 1520\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/live-classes/1/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"live-classes",
+						"1",
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/tests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"tests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImxlYXJuZXIiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3NTU3NTM1MDUsImV4cCI6MTc1NTgzOTkwNX0.jzk6MKeo_kNuSVuabkWyWYPcpz6IpaUfe452LPr9hco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/tests/1/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"tests",
+						"1",
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImxlYXJuZXIiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3NTU3NTM1MDUsImV4cCI6MTc1NTgzOTkwNX0.jzk6MKeo_kNuSVuabkWyWYPcpz6IpaUfe452LPr9hco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"answers\": [\n        {\n            \"questionId\": 1,\n            \"selectedOption\": 2\n        }\n    ],\n    \"timeSpent\": 9500\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/tests/TEST_3_1755754216753/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"tests",
+						"TEST_3_1755754216753",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/educators",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"educators"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/educators/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"educators",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImxlYXJuZXIiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3NTU3NTM1MDUsImV4cCI6MTc1NTgzOTkwNX0.jzk6MKeo_kNuSVuabkWyWYPcpz6IpaUfe452LPr9hco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/educators/1/follow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"educators",
+						"1",
+						"follow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImxlYXJuZXIiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3NTU3NTM1MDUsImV4cCI6MTc1NTgzOTkwNX0.jzk6MKeo_kNuSVuabkWyWYPcpz6IpaUfe452LPr9hco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/progress/dashboard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"progress",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImxlYXJuZXIiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3NTU3NTM1MDUsImV4cCI6MTc1NTgzOTkwNX0.jzk6MKeo_kNuSVuabkWyWYPcpz6IpaUfe452LPr9hco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/progress/course/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"progress",
+						"course",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/subscriptions/plans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"subscriptions",
+						"plans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImxlYXJuZXIiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3NTU3NTM1MDUsImV4cCI6MTc1NTgzOTkwNX0.jzk6MKeo_kNuSVuabkWyWYPcpz6IpaUfe452LPr9hco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"planId\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/subscriptions/purchase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"subscriptions",
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImxlYXJuZXIiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3NTU3NTM1MDUsImV4cCI6MTc1NTgzOTkwNX0.jzk6MKeo_kNuSVuabkWyWYPcpz6IpaUfe452LPr9hco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"courseId\": 1,\n    \"lessonId\": 1001,\n    \"question\": \"Why is acceleration constant in free fall?\",\n    \"attachments\": [\"image_url\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/doubts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"doubts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImxlYXJuZXIiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3NTU3NTM1MDUsImV4cCI6MTc1NTgzOTkwNX0.jzk6MKeo_kNuSVuabkWyWYPcpz6IpaUfe452LPr9hco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/doubts/my",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"doubts",
+						"my"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6ImVkdWNhdG9yIiwibmFtZSI6IkRyLiBTYXJhaCBLdW1hciIsImlhdCI6MTc1NTc1MzU3NCwiZXhwIjoxNzU1ODM5OTc0fQ.FJppVCr9zCdFiGnqbgep4zQiQK4MJaWhGJiMujQGcuw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/doubts/1/answer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"doubts",
+						"1",
+						"answer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImxlYXJuZXIiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3NTU3NTM1MDUsImV4cCI6MTc1NTgzOTkwNX0.jzk6MKeo_kNuSVuabkWyWYPcpz6IpaUfe452LPr9hco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/materials/course/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"materials",
+						"course",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImxlYXJuZXIiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3NTU3NTM1MDUsImV4cCI6MTc1NTgzOTkwNX0.jzk6MKeo_kNuSVuabkWyWYPcpz6IpaUfe452LPr9hco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/materials/1/download",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"materials",
+						"1",
+						"download"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/search?q=python&type=course",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "python"
+						},
+						{
+							"key": "type",
+							"value": "course"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImxlYXJuZXIiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3NTU3NTM1MDUsImV4cCI6MTc1NTgzOTkwNX0.jzk6MKeo_kNuSVuabkWyWYPcpz6IpaUfe452LPr9hco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rating\": 5,\n    \"review\": \"Excellent course with detailed explanations\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/courses/1/review",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"courses",
+						"1",
+						"review"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
