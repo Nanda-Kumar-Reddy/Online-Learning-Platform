@@ -1,0 +1,52 @@
+Assumptions Made During Development
+
+User Roles:
+
+Users can be either learners or educators, but the role is determined at the time of signup and assumed to remain fixed for the project scope.
+
+Course Ownership:
+
+Only the educator who created a course has permission to update or delete it.
+Learners cannot edit courses, but can enroll and leave reviews if enrolled.
+
+Enrollment Rules:
+
+A learner must be enrolled in a course before posting a review.
+Duplicate enrollments are not allowed (enforced via unique constraint).
+
+Review System:
+
+Each learner can leave only one review per course (can be updated later).
+Ratings are strictly integers between 1 and 5.
+
+Authentication & Security:
+
+JWT-based authentication is assumed to be sufficient for user login/session handling.
+Passwords are stored securely using hashing (e.g., bcrypt).
+
+Payments (Future Scope):
+
+For simplicity, the current implementation does not handle actual payments.
+Transactions are assumed to be free enrollments in this phase.
+
+Database Choice:
+
+SQLite is assumed to be sufficient for development and testing.
+In production, the system can be migrated to PostgreSQL/MySQL with minimal changes.
+
+Timestamps & Timezone:
+
+All created_at timestamps are stored in UTC using datetime('now').
+Timezone conversion for end users is considered an application-level concern.
+
+Error Handling:
+
+Standardized JSON responses are assumed for errors (e.g., validation errors, unauthorized access).
+Input validation is enforced at both the API and database levels.
+
+Scalability:
+
+The project assumes a moderate user base during the initial phase.
+Scaling strategies (caching, sharding, load balancing) are considered out of scope for this phase.
+
+These assumptions ensure development moves forward smoothly while leaving room for future enhancements (payments, certificates, role upgrades, etc.) without breaking the current design.
