@@ -1,0 +1,69 @@
+Database Design Decisions
+
+The database for this project is implemented using SQLite for simplicity in development and portability. The schema was designed to ensure data consistency, scalability, and relational integrity. Below are the key decisions made:
+
+1. Choice of Database
+
+SQLite was selected because:
+
+Lightweight and serverless, making setup simple for local development.
+
+Suitable for prototyping and small to medium projects.
+
+Can be easily migrated to PostgreSQL/MySQL in production if needed.
+
+2. Normalization
+
+The schema follows 3rd Normal Form (3NF):
+
+Avoids redundant data storage.
+
+Ensures relationships are handled via foreign keys.
+
+Makes querying and updates efficient.
+
+3. Core Tables
+
+Users: Stores learner and educator information.
+
+Courses: Represents courses created by educators.
+
+Lessons: Linked to courses, each course contains multiple lessons.
+
+Enrollments: Junction table between users and courses to track which learners are enrolled.
+
+Reviews: Allows enrolled users to provide ratings & feedback.
+
+Transactions (Optional): For handling future payments/extensions.
+
+4. Constraints & Integrity
+
+Primary Keys: All tables use INTEGER PRIMARY KEY AUTOINCREMENT.
+
+Foreign Keys: Ensure relationships between users, courses, lessons, and reviews.
+
+Unique Constraints:
+
+Users cannot review the same course more than once (UNIQUE(user_id, course_id) in reviews).
+
+Enrollments also enforce uniqueness per user-course pair.
+
+Check Constraints:
+
+Ratings are restricted to a 1–5 scale.
+
+5. Timestamps
+
+All tables include created_at (default: datetime('now')).
+
+This ensures auditability and makes it easier to implement features like sorting by newest.
+
+6. Scalability Considerations
+
+SQLite is sufficient for development, but schema design ensures smooth migration to PostgreSQL/MySQL.
+
+Indexed fields (user_id, course_id) in enrollment and reviews for faster lookups.
+
+Separation of concerns across tables allows easy extension (e.g., adding categories, certificates, or payments).
+
+With this design, the platform supports user management, course creation, enrollment, reviews, and global search efficiently while maintaining data integrity.
